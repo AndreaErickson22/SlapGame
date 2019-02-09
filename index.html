@@ -1,18 +1,58 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>Slap Object Game</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	 crossorigin="anonymous">
 	<link rel="stylesheet" href="game.css">
-</head>
+
+
+	<head>
+		<title>Slap Bear Game</title>
+
+	</head>
 
 <body>
-	<img src="/bear-up-8.png" alt="">
-	<footer>
-		<button type="button" class="btn btn-success">SLAP</button>
-	</footer>
-	<script src="/game.js"></script>
+	<h1 class="row justify-content-center align-items-center">Harvey the Bear</h1>
+	<div class="container-fluid">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-12"></div>
+			<img class="bear-pic" src="/bear-up-8.png" alt="">
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-12"></div>
+			<button onclick="slap(20)" type="button" class="btn btn-success">Dumpster</button>
+			<button onclick="slap(5)" type="button" class="btn btn-success">Picnic Basket</button>
+			<button onclick="slap(10)" type="button" class="btn btn-success">Fish from the River</button>
+		</div>
+
+	</div>
+	<div class="container-fluid">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-12"></div>
+			<h1 class="row justify-content-center align-items-center">Health Identifier</h1>
+			<h1 class="row justify-content-center align-items-center" id="health-meter"></h1>
+			<button onclick="ranger(-20)" type="button" class="btn btn-success">Shot</button>
+			<button onclick="ranger(-50)" type="button" class="btn btn-success">Poisoned</button>
+			<button onclick="ranger(-10)" type="button" class="btn btn-success">Trapped</button>
+			<div>
+				<button onclick="rest()" type="button" class="btn btn-success">Pet The Bear</button>
+			</div>
+		</div>
+		<h1>Custom Range Slider</h1>
+		<p>Drag the slider to display the current value.</p>
+
+		<div class="slidecontainer">
+			<input type="range" min="-100" max="100" value="0" class="slider" id="health-meter">
+			<p id="health-meter">Value: <span id="demo"></span></p>
+		</div>
+
+		<script src="/game.js"></script>
 </body>
 
 </html>
