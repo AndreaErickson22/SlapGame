@@ -15,8 +15,14 @@
 
 	</head>
 
-<body>
-	<h1 class="row justify-content-center align-items-center">Harvey the Bear</h1>
+<body background="/wooland_backArtboard 1-8.png">
+	<div class="container-fluid">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-12"></div>
+			<h1 class="row justify-content-center align-items-center Harvey">Whiskey
+				the Bear</h1>
+		</div>
+	</div>
 	<div class="container-fluid">
 		<div class="row justify-content-center align-items-center">
 			<div class="col-12"></div>
@@ -26,33 +32,50 @@
 	<div class="container-fluid">
 		<div class="row justify-content-center align-items-center">
 			<div class="col-12"></div>
-			<button onclick="slap(20)" type="button" class="btn btn-success">Dumpster</button>
-			<button onclick="slap(5)" type="button" class="btn btn-success">Picnic Basket</button>
-			<button onclick="slap(10)" type="button" class="btn btn-success">Fish from the River</button>
+			<button onclick="slap(20)" type="button" class="btn btn-success">Dumpster + 20</button>
+			<button onclick="slap(5)" type="button" class="btn btn-success">Picnic Basket + 5</button>
+			<button onclick="slap(10)" type="button" class="btn btn-success">Fish from the River + 10</button>
 		</div>
 
 	</div>
 	<div class="container-fluid">
 		<div class="row justify-content-center align-items-center">
 			<div class="col-12"></div>
-			<h1 class="row justify-content-center align-items-center">Health Identifier</h1>
-			<h1 class="row justify-content-center align-items-center" id="health-meter"></h1>
-			<button onclick="ranger(-20)" type="button" class="btn btn-success">Shot</button>
-			<button onclick="ranger(-50)" type="button" class="btn btn-success">Poisoned</button>
-			<button onclick="ranger(-10)" type="button" class="btn btn-success">Trapped</button>
-			<div>
-				<button onclick="rest()" type="button" class="btn btn-success">Pet The Bear</button>
+			<div class="health-box justify-content-center align-items-center">
+				<h1 class="row justify-content-center align-items-center">Health Identifier</h1>
 			</div>
 		</div>
+		<div class="row justify-content-center align-items-center">
+			<div class="col-12"></div>
+			<div class="meterbox justify-content-center align-items-center">
+				<h1 class="row justify-content-center align-items-center" id="health-meter"></h1>
+			</div>
+		</div>
+		<div class="row justify-content-center align-items-center">
+			<div class="col-12"></div>
+			<button onclick="ranger(-20)" type="button" class="btn btn-danger">Shot - 20</button>
+			<button onclick="ranger(-50)" type="button" class="btn btn-danger">Poisoned -50</button>
+			<button onclick="ranger(-10)" type="button" class="btn btn-danger">Trapped -10</button>
+		</div>
+		<div class="row justify-content-center align-items-center">
+			<div class="col-12"></div>
+			<div>
+				<button onclick="rest()" type="button" class="btn btn-success">Relocate Whiskey - Reset Game</button>
+			</div>
+		</div>
+	</div>
+	<div class='slider'>
 		<h1 class="row justify-content-center align-items-center">Custom Range Slider</h1>
 		<p class="row justify-content-center align-items-center">Drag the slider to display the current value.</p>
 
 		<div class="slidecontainer row justify-content-center align-items-center">
-			<input type="range" min="-100" max="100" value="0" class="slider" id="health-meter">
+			<input type="range" min="0" max="100" value="50" class="slider" style="width: 500px; height: 40px; background: rgb(214, 12, 204)"
+			 id="health-meter">
 			<p id="health-meter">Value: <span id="demo"></span></p>
 		</div>
+	</div>
 
-		<script src="/game.js"></script>
+	<script src="/game.js"></script>
 </body>
 
 </html>

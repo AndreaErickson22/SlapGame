@@ -19,6 +19,7 @@ function ranger(val) {
   document.getElementById("health-meter").innerText = health.toString()
 
 }
+
 /*
 var slider = document.getElementById("health-meter");
 var output = document.getElementById("health-meter");
